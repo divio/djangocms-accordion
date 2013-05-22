@@ -1,0 +1,19 @@
+{% load i18n static cms_tags menu_tags sekizai_tags %}
+
+{% addtoblock "js" %}<script src="{% static 'js/plugins/cl.accordion.js' %}"></script>{% endaddtoblock "js" %}
+{% addtoblock "js" %}
+<script>
+$(document).ready(function ($) {
+    // option accordion
+    var accordion_{{ instance.pk }} = new Cl.Accordion('#accordion-{{ accordion.pk }}',{
+        'index': 0,
+        'event': 'click'
+    });
+});
+</script>
+{% endaddtoblock "js" %}
+<div class="accordion" id="accordion-{{ accordion.pk }}">
+    {% for plugin in accordion.child_plugin_instances %}
+		{% with forloop as parentloop %}{% render_plugin plugin %}{% endwith %}
+    {% endfor %}
+</div>

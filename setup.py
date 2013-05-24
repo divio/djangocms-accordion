@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
-from djangocms_grid import __version__
+from djangocms_accordion import __version__
 
 
 INSTALL_REQUIRES = [

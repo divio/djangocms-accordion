@@ -13,7 +13,7 @@ $(document).ready(function ($) {
 });
 </script>
 {% endaddtoblock "js" %}
-<div class="accordion" id="accordion-{{ accordion.pk }}">
+<div class="accordion {{ accordion.custom_classes }}" id="accordion-{{ accordion.pk }}">
     {% for plugin in accordion.child_plugin_instances %}
 		{% with forloop as parentloop %}{% render_plugin plugin %}{% endwith %}
     {% endfor %}

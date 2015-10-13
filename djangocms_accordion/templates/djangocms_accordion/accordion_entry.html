@@ -1,6 +1,6 @@
 {% load cms_tags %}
 <h3 class="trigger"><a href="#accordion-{{ accordion.pk }}-{{ parentloop.counter }}">{{ instance.title }}</a></h3>
-<div class="container" id="#accordion-{{ accordion.pk }}-{{ parentloop.counter }}">
+<div class="container {{ accordion.custom_classes }}" id="#accordion-{{ accordion.pk }}-{{ parentloop.counter }}">
     <div class="container-padding">
         {% for plugin in instance.child_plugin_instances %}{% render_plugin plugin %}{% endfor %}
     </div>

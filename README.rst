@@ -18,4 +18,4 @@ Also, it assumes you have `Cl.Accordion`_ installed in your project.
 Usage
 -----
 
-.. _Cl.Accordion: http://classjs-plugins.readthedocs.org/en/latest/src/cl.accordion.html
+.. _Cl.Accordion: https://classjs-plugins.readthedocs.io/en/latest/src/cl.accordion.html
